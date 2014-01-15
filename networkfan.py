@@ -19,10 +19,6 @@ while True:
 	c = open('stdout.txt', 'r+')
 	data = c.read()
 	xbox = int(data[data.find('responded')-3:data.find('responded')].strip())
-	#xbox = int(c.read(1))
-	print
-	print xbox
-	print
 	if xbox == 1:
 		print "ping to", xbox360address, "ok"
 		print 'xbox 360 fan on'
@@ -47,6 +43,7 @@ while True:
                 f.write('0')
                 f.close()
 		c.close()
+	print
 	print
 # PS3
 	print 'Looking for PS3'
@@ -73,5 +70,6 @@ while True:
                 f.seek(18)
                 f.write('0')
                 f.close()
+	print
 	print
 	time.sleep(5)
